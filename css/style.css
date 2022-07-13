@@ -4,3 +4,34 @@
     padding: 0;
     box-sizing: border-box;
 }
+/* body */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* header */
+header{
+    margin: 20px 10px 20px;
+}
+
+
+main {
+    background-color: aquamarine;
+}
+
+ #grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 600px;
+    height: 600px;
+    margin: auto;
+    padding: 50px;
+    align-content: flex-start;
+ }
+
+.square {
+    border: solid 1px #fff;
+    width: calc(100% / 10);
+    height: calc(100% / 10);
+
+}
