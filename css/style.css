@@ -35,3 +35,7 @@ main {
     height: calc(100% / 10);
 
 }
+
+.clicked {
+    background-color: lightblue;
+}
