@@ -11,10 +11,27 @@ body {
 
 /* header */
 header{
-    margin: 20px 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 50px 20px;
+}
+header img{
+    height: 50px;
+    vertical-align: middle;
+}
+.logo-text{
+    font-size: 40px;
+    color: #000;
+    vertical-align: middle;
+    font-weight: bold;
+}
+header .logo{
+    display: inline-block;
+    height: 50px;
+    vertical-align: middle;
 }
 
-
+/* main */
 main {
     background-color: aquamarine;
 }
@@ -30,7 +47,7 @@ main {
  }
 
 .square {
-    border: solid 1px #fff;
+    border: solid 1px #000;
     width: calc(100% / 10);
     height: calc(100% / 10);
 
@@ -39,3 +56,8 @@ main {
 .clicked {
     background-color: lightblue;
 }
+/* footer */
+footer{
+    margin: 20px 50px 20px;
+}
+
