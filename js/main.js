@@ -5,25 +5,37 @@ Ci saranno quindi 10 caselle per ognuna delle 10 righe.
 Quando l’utente clicca su ogni cella, la cella cliccata si colora di azzurro ed emetto un messaggio in console con il numero della cella cliccata. */
   
 
+const playDom = document.getElementById('play');
 
-const gridDom = document.getElementById('grid');
+playDom.addEventListener('click',
+
+    function () { 
+        //creo griglia
+        const gridDom = document.getElementById('grid');
+
+        for (let i = 1; i < 101; i++) { 
+
+            const currentElement = createGridSquare(i);
+
+            currentElement.addEventListener('click',
+                function (){
+                    if (this.classList.contains('clicked')) {
+                        this.classList.remove('clicked');
+                    } else {
+                         this.classList.add('clicked');
+                    }
+                }
+            );
+            gridDom.append(currentElement);
+        }    
+    }
+)
 
 
-for (let i = 1; i < 101; i++) { 
 
+function createGridSquare(numero) {
     const currentElement = document.createElement('div');
     currentElement.classList.add('square');
-
-    currentElement.addEventListener('click',
-    function (){
-        if (this.classList.contains('clicked')) {
-            this.classList.remove('clicked');
-        } else {
-            this.classList.add('clicked');
-        }
-    }
-    );
-
-
-    gridDom.append(currentElement);
-}
+    currentElement.append(numero);
+    return currentElement;
+}  
